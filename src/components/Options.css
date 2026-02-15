@@ -1,0 +1,48 @@
+#gear {
+    width: 20px;
+    height: 20px;
+}
+
+.options-container {
+    position: relative;
+    justify-content: center;
+}
+
+.options-button {
+    background-color: darkgray;
+    border-radius: 5px;
+    border: 0;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.options-button:hover {
+    background-color: gray;
+}
+
+.options-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 3.5rem;
+}
+
+.options-menu button {
+    background-color: gray;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    height: 1.5rem;
+}
+
+.public:hover, .public.selected {
+    background-color: mediumseagreen;
+}
+
+.unlisted:hover, .unlisted.selected {
+    background-color: dodgerblue;
+}
+
+.private:hover, .private.selected {
+    background-color: lightsalmon;
+}

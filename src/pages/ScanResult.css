@@ -1,0 +1,63 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+
+.loading {
+    width: 75px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side, currentColor 90%, transparent);
+    background:
+        var(--_g) 0% 50%,
+        var(--_g) 50% 50%,
+        var(--_g) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: l7 1s infinite linear;
+}
+
+@keyframes l7 {
+    33% {
+        background-size: calc(100%/3) 0%, calc(100%/3) 100%, calc(100%/3) 100%
+    }
+
+    50% {
+        background-size: calc(100%/3) 100%, calc(100%/3) 0%, calc(100%/3) 100%
+    }
+
+    66% {
+        background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0%
+    }
+}
+
+.error {
+    font-size: 200%;
+    margin-top: 3rem;
+    padding-left: 0.75rem;
+}
+
+.scan-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    font-size: 175%;
+}
+
+.summary p {
+    margin: 1rem;
+}
+
+#screenshot {
+    width: 50%;
+    height: 50%;
+}

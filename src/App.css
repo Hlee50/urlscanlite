@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(50,50,50);
+    color: white;
+    overflow: hidden;
+}
+
+.dark {
+    background-color: rgb(50,50,50);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+.light {
+    background-color: ghostwhite;
+    color:  rgb(50,50,50);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#theme-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    cursor: pointer;
+}

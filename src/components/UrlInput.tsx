@@ -1,6 +1,6 @@
 import { NavLink, useSearchParams } from 'react-router'
 import { useState } from 'react'
-import { scan } from '../api/scan'
+import { submitScan } from '../api/scan'
 import { Options } from './Options'
 import magnifier from "../assets/images/iconmonstr-magnifier-2-240.png"
 import './UrlInput.css'
@@ -10,8 +10,10 @@ type Result = {
     url: string;
     domain: string;
     ip: string;
+    asnname: string;
     country: string;
     city: string;
+    malicious: boolean;
     screenshot: string;
 } | {
     status: number;
@@ -35,18 +37,27 @@ export function UrlInput({ options, setOptions, visibility, setVisibility, setRe
         setScanUrl(event.target.value);
     };
 
+    const scan = () => {
+        submitScan(scanUrl, visibility, setResult);
+    };
+
+    const handleOnSubmit = (e : any) => {
+        e.preventDefault();
+        scan();
+    };
+
     return (
-        <div className="input-container">
+        <form onSubmit={handleOnSubmit} className="input-container">
             <input className="search-bar" placeholder="URL" value={scanUrl} onChange={changeSearchUrl}></input>
 
             <NavLink to={`/scan?url=${encodeURIComponent(scanUrl)}`} className="scan-link">
-                <button className="scan-button" onClick={() => scan(scanUrl, visibility, setResult)}>
+                <button className="scan-button" onClick={scan}>
                     <img id="magnifier" src={magnifier} alt="Scan Icon" />
                     Scan
                 </button>
             </NavLink>
 
             <Options options={options} setOptions={setOptions} visibility={visibility} setVisibility={setVisibility} />
-        </div>
+        </form>
     );
 }

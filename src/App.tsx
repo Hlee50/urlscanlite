@@ -11,8 +11,10 @@ type Result = {
     url: string;
     domain: string;
     ip: string;
+    asnname: string;
     country: string;
     city: string;
+    malicious: boolean;
     screenshot: string;
 } | {
     status: number;

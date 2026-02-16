@@ -5,8 +5,10 @@ type Result = {
     url: string;
     domain: string;
     ip: string;
+    asnname: string;
     country: string;
     city: string;
+    malicious: boolean;
     screenshot: string;
 } | {
     status: number;
@@ -14,7 +16,7 @@ type Result = {
     description: string;
 } | null;
 
-export async function scan(scanUrl: string, visibility: string, setResult: React.Dispatch<React.SetStateAction<Result | null>>) {
+export async function submitScan(scanUrl: string, visibility: string, setResult: React.Dispatch<React.SetStateAction<Result | null>>) {
     try {
         setResult(null);
         const country = visibility === "private" ? "" : "us";
@@ -39,8 +41,10 @@ export async function scan(scanUrl: string, visibility: string, setResult: React
                         url: response.data.page.url,
                         domain: response.data.page.domain,
                         ip: response.data.page.ip,
+                        asnname: response.data.page.asnname,
                         country: response.data.page.country,
                         city: response.data.page.city,
+                        malicious: response.data.verdicts.overall.malicious,
                         screenshot: `https://urlscan.io/screenshots/${uuid}.png`
                     });
                     return;

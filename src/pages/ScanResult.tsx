@@ -6,8 +6,10 @@ type Result = {
     url: string;
     domain: string;
     ip: string;
+    asnname: string;
     country: string;
     city: string;
+    malicious: boolean;
     screenshot: string;
 } | {
     status: number;
@@ -31,7 +33,7 @@ export function ScanResult({ options, setOptions, visibility, setVisibility, res
                 visibility={visibility} setVisibility={setVisibility}
                 setResult={setResult} />
 
-            {result === null && <div className="loading-container"><div className="loading"/></div>}
+            {result === null && <div className="loading-container"><div className="loading" /></div>}
 
             {result && result.status >= 400 && "message" in result &&
                 <p className="error">{result.message}<br />{result.description}</p>}
@@ -41,10 +43,17 @@ export function ScanResult({ options, setOptions, visibility, setVisibility, res
                     <div className="summary">
                         <p><strong>URL: </strong>{result.url}</p>
                         <p><strong>Domain: </strong>{result.domain}</p>
-                        <p><strong>IP Address:  </strong>{result.ip || 'Unknown'}</p>
+                        <p><strong>IP Address: </strong>{result.ip || 'Unknown'}</p>
+                        <p><strong>Network Operator: </strong>{result.asnname || 'Unknown'}</p>
                         <p>
                             <strong>Location: </strong>
                             {([result.city, result.country].filter(Boolean).join(', ') || 'Unknown')}
+                        </p>
+                        <p>
+                            <strong>Verdict: </strong>
+                            <span style={{ color: result.malicious ? 'red' : 'limegreen' }}>
+                                {result.malicious ? "Malicious" : "Clean"}
+                            </span>
                         </p>
                     </div>
                     <img id="screenshot" src={result.screenshot} alt="Scan Screenshot" />

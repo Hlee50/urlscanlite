@@ -6,7 +6,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     try {
-        // console.log('API_KEY:', process.env.API_KEY);
         const body = req.body;
 
         const response = await fetch("https://urlscan.io/api/v1/scan", {

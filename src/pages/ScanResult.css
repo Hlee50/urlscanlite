@@ -5,6 +5,7 @@
     margin-top: 20rem;
 }
 
+/* https://css-loaders.com/dots/ */
 .loading {
     width: 75px;
     aspect-ratio: 4;
@@ -41,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    min-height: 42rem;
     gap: 1rem;
 }
 

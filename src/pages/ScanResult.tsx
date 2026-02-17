@@ -56,7 +56,9 @@ export function ScanResult({ options, setOptions, visibility, setVisibility, res
                             </span>
                         </p>
                     </div>
-                    <img id="screenshot" src={result.screenshot} alt="Scan Screenshot" />
+                    <div className="screenshot-container">
+                        <img id="screenshot" src={result.screenshot} alt="Scan Screenshot" />
+                    </div>
                 </div>}
         </>
     );

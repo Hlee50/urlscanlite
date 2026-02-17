@@ -11,7 +11,7 @@ interface OptionsProps {
 export function Options({ options, setOptions, visibility, setVisibility }: OptionsProps) {
     return (
         <div className="options-container">
-            <button className="options-button" onClick={() => setOptions(!options)}>
+            <button className="options-button" type="button" onClick={() => setOptions(!options)}>
                 <img id="gear" src={gear} alt="Gear Icon"></img>
             </button>
 
@@ -19,6 +19,7 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
                 <div className="options-menu">
                     <button
                         className={visibility === "public" ? "public selected" : "public"}
+                        type="button"
                         onClick={() => {
                             setVisibility("public");
                             setOptions(!options);
@@ -27,6 +28,7 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
                     </button>
                     <button
                         className={visibility === "unlisted" ? "unlisted selected" : "unlisted"}
+                        type="button"
                         onClick={() => {
                             setVisibility("unlisted");
                             setOptions(!options);
@@ -35,6 +37,7 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
                     </button>
                     <button
                         className={visibility === "private" ? "private selected" : "private"}
+                        type="button"
                         onClick={() => {
                             setVisibility("private");
                             setOptions(!options);

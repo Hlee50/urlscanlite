@@ -1,34 +1,3 @@
-#key-icon {
-    background-color: darkgray;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 1.2rem;
-    right: 13.5rem;
-    border-radius: 5px;
-}
-
-#key-icon:hover {
-    background-color: gray;
-}
-
-.api-key {
-    position: absolute;
-    top: 1.3rem;
-    right: 4rem;
-    font-size: 75%;
-}
-
-.api-key.hidden{
-    opacity: 0.5;
-    caret-color: transparent;
-}
-
-.api-key.visible{
-    opacity: 1;
-}
-
-
 .home-container {
     display: flex;
     flex-direction: column;
@@ -38,8 +7,10 @@
 }
 
 .description {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .urlscan-link {

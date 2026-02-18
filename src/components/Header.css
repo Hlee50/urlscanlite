@@ -14,14 +14,9 @@
     height: 3rem;
 }
 
-.header-container .url-input {
+.header-container .search-bar {
     height: 89%;
-    width: 55rem;
     font-size: 125%;
-}
-
-.header-container .scan-button, .header-container .options-button {
-    height: 3rem; 
 }
 
 .home-link {

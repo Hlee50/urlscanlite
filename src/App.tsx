@@ -7,19 +7,19 @@ import moon from "./assets/images/iconmonstr-weather-119-240.png"
 import './App.css'
 
 type Result = {
-    status: 200;
-    url: string;
-    domain: string;
-    ip: string;
-    asnname: string;
-    country: string;
-    city: string;
-    malicious: boolean;
-    screenshot: string;
+  status: 200;
+  url: string;
+  domain: string;
+  ip: string;
+  asnname: string;
+  country: string;
+  city: string;
+  malicious: boolean;
+  screenshot: string;
 } | {
-    status: number;
-    message: string;
-    description: string;
+  status: number;
+  message: string;
+  description: string;
 } | null;
 
 function App() {
@@ -38,16 +38,14 @@ function App() {
 
   return (
     <>
-      <img
-        id="theme-icon"
+      <img id="theme-icon"
         src={theme === "dark" ? sun : moon} alt="Theme Icon"
-        onClick={toggleTheme}
-      />
+        onClick={toggleTheme} />
 
       <Routes>
-        <Route index element={<Home options={options} setOptions={setOptions}
-          visibility={visibility} setVisibility={setVisibility} 
-          setResult={setResult}/>} />
+        <Route index element={<Home theme={theme} options={options} setOptions={setOptions}
+          visibility={visibility} setVisibility={setVisibility}
+          setResult={setResult} />} />
         <Route path="/scan" element={<ScanResult options={options} setOptions={setOptions}
           visibility={visibility} setVisibility={setVisibility} result={result} setResult={setResult} />} />
       </Routes>

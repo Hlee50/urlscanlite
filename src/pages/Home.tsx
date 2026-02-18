@@ -1,5 +1,7 @@
 import { Title } from '../components/Title'
 import { UrlInput } from '../components/UrlInput'
+import invertocatblack from "../assets/images/GitHub_Invertocat_Black.png"
+import invertocatwhite from "../assets/images/GitHub_Invertocat_White.png"
 import './Home.css'
 
 type Result = {
@@ -19,6 +21,7 @@ type Result = {
 } | null;
 
 interface HomeProps {
+    theme: string,
     options: boolean;
     setOptions: React.Dispatch<React.SetStateAction<boolean>>;
     visibility: string;
@@ -26,15 +29,22 @@ interface HomeProps {
     setResult: React.Dispatch<React.SetStateAction<Result | null>>;
 }
 
-export function Home({ options, setOptions, visibility, setVisibility, setResult }: HomeProps) {
+export function Home({ theme, options, setOptions, visibility, setVisibility, setResult }: HomeProps) {
     return (
         <>
+            <a href="https://github.com/Hlee50/urlscanlite">
+                <img id="github-icon"
+                    src={theme === "dark" ? invertocatwhite : invertocatblack}
+                    alt="GitHub Invertocat" />
+            </a>
+
             <div className="home-container">
                 <Title />
                 <UrlInput options={options} setOptions={setOptions}
                     visibility={visibility} setVisibility={setVisibility}
                     setResult={setResult} />
             </div>
+            
             <span className="description">
                 A lite version of&nbsp;<a href="https://urlscan.io" className="urlscan-link">urlscan.io</a>
             </span>

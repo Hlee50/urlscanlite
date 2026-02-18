@@ -10,9 +10,9 @@
 
 .options-button {
     background-color: darkgray;
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     border: 0;
-    height: 3.5rem;
+    height: 100%;
     width: 3.5rem;
 }
 

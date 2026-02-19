@@ -67,7 +67,8 @@
 }
 
 .summary p {
-    margin: 1rem;
+    margin: 0.5rem;
+    overflow-wrap: anywhere;
 }
 
 .screenshot-container {

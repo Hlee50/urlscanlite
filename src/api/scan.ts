@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getIso3166CountryName } from "iso-3166-ts";
 
 type Result = {
     status: 200;
@@ -42,7 +43,7 @@ export async function submitScan(scanUrl: string, visibility: string, setResult:
                         domain: response.data.page.domain,
                         ip: response.data.page.ip,
                         asnname: response.data.page.asnname,
-                        country: response.data.page.country,
+                        country: getIso3166CountryName(response.data.page.country) || response.data.page.country,
                         city: response.data.page.city,
                         malicious: response.data.verdicts.overall.malicious,
                         screenshot: `https://urlscan.io/screenshots/${uuid}.png`

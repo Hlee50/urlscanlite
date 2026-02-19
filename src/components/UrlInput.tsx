@@ -48,7 +48,7 @@ export function UrlInput({ options, setOptions, visibility, setVisibility, setRe
 
     return (
         <form onSubmit={handleOnSubmit} className="input-container">
-            <input className="search-bar" placeholder="URL" value={scanUrl} onChange={changeSearchUrl}></input>
+            <input className="search-bar" name="scanUrl" placeholder="URL" value={scanUrl} onChange={changeSearchUrl}></input>
 
             <NavLink to={`/scan?url=${encodeURIComponent(scanUrl)}`} className="scan-link">
                 <button className="scan-button" onClick={scan}>

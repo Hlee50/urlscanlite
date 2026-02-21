@@ -21,28 +21,31 @@
 }
 
 .options-menu {
+    background-color: gray;
     display: flex;
     flex-direction: column;
     position: absolute;
+    border-radius: 0px 5px 5px 5px;
     width: 3.5rem;
+    overflow: hidden;
 }
 
 .options-menu button {
-    background-color: gray;
-    border-radius: 5px;
+    background-color: transparent;
     border: 0;
     color: white;
+    text-align: center;
     height: 1.5rem;
 }
 
-.public:hover, .public.selected {
+.options-menu .public:hover, .options-menu .public.selected {
     background-color: mediumseagreen;
 }
 
-.unlisted:hover, .unlisted.selected {
+.options-menu .unlisted:hover, .options-menu .unlisted.selected {
     background-color: dodgerblue;
 }
 
-.private:hover, .private.selected {
+.options-menu .private:hover, .options-menu .private.selected {
     background-color: lightsalmon;
 }

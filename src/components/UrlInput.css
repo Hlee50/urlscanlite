@@ -17,13 +17,11 @@
 
 .search-bar:focus {
     border-color: inherit;
-    transition: border-color 0.25s ease;
+    box-shadow: 0px 0px 2.5px currentColor;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .scan-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: DeepSkyBlue;
     border: 0;
     color: white;

@@ -6,9 +6,15 @@ body {
 
 input {
     border-style: solid;
-    border-color: gray;
+    border-color: darkgray;
     border-radius: 5px;
     background: transparent;
     outline: none;
     color: inherit;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

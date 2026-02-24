@@ -34,8 +34,8 @@
     background-color: transparent;
     border: 0;
     color: white;
-    text-align: center;
     height: 1.5rem;
+    font-size: 80%;
 }
 
 .options-menu .public:hover, .options-menu .public.selected {

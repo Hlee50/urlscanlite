@@ -22,7 +22,7 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [setOptions]);
 
     return (
         <div className="options-container" ref={optionsRef}>

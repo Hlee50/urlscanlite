@@ -13,7 +13,7 @@ body {
 
 .light {
     background-color: ghostwhite;
-    color:  rgb(50,50,50);
+    color: rgb(50,50,50);
     transition: background-color 0.5s, color 0.5s;
 }
 

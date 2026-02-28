@@ -1,7 +1,6 @@
 .input-container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     justify-content: center;
     height: 3.5rem;
 }
@@ -17,7 +16,7 @@
 
 .search-bar:focus {
     border-color: inherit;
-    box-shadow: 0px 0px 2.5px currentColor;
+    box-shadow: 0px 0px 2px currentColor;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -41,4 +40,20 @@
 
 .scan-link {
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        height: 3rem;
+    }
+
+    .search-bar {
+        font-size: 125%;
+        width: 60vw;
+    }
+
+    .scan-button {
+        width: 3rem;
+        font-size: 0;
+    }
 }

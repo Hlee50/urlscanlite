@@ -20,6 +20,7 @@
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .urlscan-link {
@@ -30,4 +31,10 @@
 .urlscan-link:hover {
     color: DeepSkyBlue;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 90%;
+    }
 }

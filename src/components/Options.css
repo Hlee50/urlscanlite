@@ -38,14 +38,28 @@
     font-size: 80%;
 }
 
-.options-menu .public:hover, .options-menu .public.selected {
+.options-menu .public:hover,
+.options-menu .public.selected {
     background-color: mediumseagreen;
 }
 
-.options-menu .unlisted:hover, .options-menu .unlisted.selected {
+.options-menu .unlisted:hover,
+.options-menu .unlisted.selected {
     background-color: dodgerblue;
 }
 
-.options-menu .private:hover, .options-menu .private.selected {
+.options-menu .private:hover,
+.options-menu .private.selected {
     background-color: lightsalmon;
+}
+
+@media (max-width: 768px) {
+    .options-button {
+        width: 3rem;
+    }
+
+    .options-menu {
+        font-size: 90%;
+        width: 3rem;
+    }
 }

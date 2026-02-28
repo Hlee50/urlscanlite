@@ -84,3 +84,30 @@
     height: 100%;
     border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    .loading {
+        width: 3rem;
+    }
+
+    .error {
+        font-size: 100%;
+        margin-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .scan-result {
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 1rem;
+    }
+
+    .summary {
+        width: 90%;
+        font-size: 100%;
+    }
+
+    .screenshot-container {
+        width: 90%;
+    }
+}

@@ -34,7 +34,16 @@
 }
 
 @media (max-width: 768px) {
+    .home-container {
+        height: 30rem;
+    }
+
     .description {
+        position: static;
+        margin-top: -10rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
         font-size: 90%;
     }
 }

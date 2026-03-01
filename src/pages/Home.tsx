@@ -45,9 +45,9 @@ export function Home({ theme, options, setOptions, visibility, setVisibility, se
                     setResult={setResult} />
             </div>
             
-            <span className="description">
+            <div className="description">
                 A lite version of&nbsp;<a href="https://urlscan.io" className="urlscan-link">urlscan.io</a>
-            </span>
+            </div>
         </>
     );
 }

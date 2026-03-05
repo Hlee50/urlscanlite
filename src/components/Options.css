@@ -53,7 +53,18 @@
     background-color: lightsalmon;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
+    .options-button {
+        width: 3rem;
+    }
+
+    .options-menu {
+        font-size: 90%;
+        width: 3rem;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
     .options-button {
         width: 3rem;
     }

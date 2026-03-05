@@ -36,8 +36,8 @@
 .error {
     font-size: 200%;
     margin-top: 3rem;
-    margin-left: 0.5rem;
-    padding-left: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .scan-result {
@@ -87,7 +87,7 @@
     border-radius: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .loading {
         width: 3rem;
     }
@@ -95,13 +95,11 @@
     .error {
         font-size: 100%;
         margin-top: 1rem;
-        padding-left: 1rem;
     }
 
     .scan-result {
         flex-direction: column;
         padding-top: 1.5rem;
-        gap: 1rem;
     }
 
     .summary {
@@ -109,7 +107,43 @@
         font-size: 100%;
     }
 
+    .summary p {
+        margin: 0.3rem;
+    }
+
     .screenshot-container {
         width: 90%;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .loading-container {
+        height: 15rem;
+    }
+
+    .loading {
+        width: 3rem;
+    }
+
+    .error {
+        font-size: 100%;
+        margin-top: 1rem;
+    }
+
+    .scan-result {
+        padding-top: 0.5rem;
+    }
+
+    .summary {
+        width: 40%;
+        font-size: 90%;
+    }
+
+    .summary p {
+        margin: 0.3rem;
+    }
+
+    .screenshot-container {
+        width: 40%;
     }
 }

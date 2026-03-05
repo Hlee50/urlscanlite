@@ -42,7 +42,23 @@
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
+    .input-container {
+        height: 3rem;
+    }
+
+    .search-bar {
+        font-size: 125%;
+        width: 60vw;
+    }
+
+    .scan-button {
+        width: 3rem;
+        font-size: 0;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
     .input-container {
         height: 3rem;
     }

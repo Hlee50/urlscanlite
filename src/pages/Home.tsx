@@ -35,7 +35,7 @@ export function Home({ theme, options, setOptions, visibility, setVisibility, se
             <a href="https://github.com/Hlee50/urlscanlite">
                 <img id="github-icon"
                     src={theme === "dark" ? invertocatwhite : invertocatblack}
-                    alt="GitHub Invertocat" />
+                    alt="GitHub" />
             </a>
 
             <div className="home-container">

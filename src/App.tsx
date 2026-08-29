@@ -38,9 +38,9 @@ function App() {
 
   return (
     <>
-      <img id="theme-icon"
-        src={theme === "dark" ? sun : moon} alt="Theme Icon"
-        onClick={toggleTheme} />
+      <button className="theme-button" type="button" onClick={toggleTheme} aria-label="Theme toggle">
+        <img id="theme-icon" src={theme === "dark" ? sun : moon} alt=""/>
+      </button>
 
       <Routes>
         <Route index element={<Home theme={theme} options={options} setOptions={setOptions}

@@ -26,8 +26,8 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
 
     return (
         <div className="options-container" ref={optionsRef}>
-            <button className="options-button" type="button" onClick={() => setOptions(!options)}>
-                <img id="gear" src={gear} alt="Gear Icon"></img>
+            <button className="options-button" type="button" onClick={() => setOptions(!options)} aria-label="Options">
+                <img id="gear" src={gear} alt="" />
             </button>
 
             {options && (
@@ -62,5 +62,5 @@ export function Options({ options, setOptions, visibility, setVisibility }: Opti
                 </div>
             )}
         </div>
-    )
+    );
 }

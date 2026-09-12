@@ -25,7 +25,9 @@
 
 .urlscan-link {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 .urlscan-link:hover {

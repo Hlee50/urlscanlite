@@ -54,6 +54,7 @@
 
     .urlscan-link {
         text-decoration: underline;
+        transition: none;
     }
 }
 
@@ -73,5 +74,6 @@
 
     .urlscan-link {
         text-decoration: underline;
+        transition: none;
     }
 }

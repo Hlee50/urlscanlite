@@ -27,12 +27,15 @@
     color: inherit;
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: color 0.2s, text-decoration-color 0.2s;
+    transition: color 0.5s, text-decoration-color 0.5s;
 }
 
-.urlscan-link:hover {
-    color: DeepSkyBlue;
-    text-decoration: underline;
+@media (hover: hover) {
+    .urlscan-link:hover {
+        color: DeepSkyBlue;
+        text-decoration-color: DeepSkyBlue;
+        transition: color 0.2s, text-decoration-color 0.2s;
+    }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -48,6 +51,10 @@
         transform: none;
         font-size: 90%;
     }
+
+    .urlscan-link {
+        text-decoration: underline;
+    }
 }
 
 @media (max-height: 480px) and (orientation: landscape) {
@@ -62,5 +69,9 @@
         left: auto;
         transform: none;
         font-size: 90%;
+    }
+
+    .urlscan-link {
+        text-decoration: underline;
     }
 }

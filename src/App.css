@@ -12,7 +12,6 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
-
 .light {
     background-color: ghostwhite;
     color: rgb(50,50,50);
@@ -32,12 +31,14 @@ body {
     transition: background-color 0.15s ease;
 }
 
-.dark .theme-button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
+@media (hover: hover) {
+    .dark .theme-button:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
 
-.light .theme-button:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+    .light .theme-button:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
 }
 
 #theme-icon {

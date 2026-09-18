@@ -4,18 +4,17 @@ body {
     padding: 0;
     color: white;
     overflow: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark {
     background-color: rgb(50,50,50);
     color: white;
-    transition: background-color 0.5s, color 0.5s;
 }
 
 .light {
     background-color: ghostwhite;
     color: rgb(50,50,50);
-    transition: background-color 0.5s, color 0.5s;
 }
 
 .theme-button {

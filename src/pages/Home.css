@@ -27,14 +27,14 @@
     color: inherit;
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: color 0.5s, text-decoration-color 0.5s;
+    transition: text-decoration-color 0.2s ease;
 }
 
 @media (hover: hover) {
     .urlscan-link:hover {
         color: DeepSkyBlue;
         text-decoration-color: DeepSkyBlue;
-        transition: color 0.2s, text-decoration-color 0.2s;
+        transition: color 0.2s ease;
     }
 }
 

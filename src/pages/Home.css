@@ -27,7 +27,13 @@
     color: inherit;
     text-decoration: underline;
     text-decoration-color: transparent;
+    -webkit-tap-highlight-color: transparent;
     transition: text-decoration-color 0.2s ease;
+}
+
+.urlscan-link:active {
+    color: DeepSkyBlue;
+    text-decoration-color: DeepSkyBlue;
 }
 
 @media (hover: hover) {

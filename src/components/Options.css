@@ -17,8 +17,14 @@
     transition: background-color 0.15s ease;
 }
 
-.options-button:hover {
+.options-button:active {
     background-color: gray;
+}
+
+@media (hover: hover) {
+    .options-button:hover {
+        background-color: gray;
+    }
 }
 
 .options-menu {

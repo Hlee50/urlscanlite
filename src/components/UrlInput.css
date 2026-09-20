@@ -30,8 +30,14 @@
     transition: background-color 0.15s ease;
 }
 
-.scan-button:hover {
+.scan-button:active {
     background-color: DodgerBlue;
+}
+
+@media (hover: hover) {
+    .scan-button:hover {
+        background-color: DodgerBlue;
+    }
 }
 
 #magnifier {
